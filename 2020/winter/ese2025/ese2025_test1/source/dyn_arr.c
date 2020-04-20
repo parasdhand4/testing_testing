@@ -49,7 +49,7 @@ int comparo_gName(const void *pA, const void *pB)
 	char *gName_A = student_A.data.gName;
 	char *gName_B = student_B.data.gName;
 
-	return strcmp(gName_A, gName_B);
+	return (gName_A, gName_B);
 }
 
 /*
