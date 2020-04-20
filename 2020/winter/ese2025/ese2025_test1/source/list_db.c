@@ -23,7 +23,7 @@ stuLL_t* createNodeLinkedList(stuRec_t stdata)
 	stuLL_t* pHEAD = (stuLL_t*)malloc(sizeof(stuLL_t)); //we are creating a memory block with the help of malloc which is same size of Node i.e 4 bytes
 	if (pHEAD!=NULL)    //it we don’t put NULL here it will have some garbage value means at starting it points another node. 
 	{
-		pHEAD->data.fName=stdata.fName;
+		pHEAD->data.fName=stdata.fName;  //new data to goes to created node.
 		pHEAD->data.gName=stdata.gName;
 		pHEAD->data.grade = stdata.grade;
 		pHEAD->pNext = NULL; // the head node is also the last node atm
@@ -102,8 +102,8 @@ stuLL_t* findLinkedList(stuLL_t *pHEAD, char *targetFamilyName)
 		// list is not empty, begin search
 		while ((pW != NULL) && (strcmp(pW->data.fName, targetFamilyName)))
 		{
-			// PROBLEM #2: complete the code for this function
-			//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+			//PROBLEM #2 -:
+			pW=pW->pNext; //If We dont find pW=NULL , it will step to next. 
 		}
 		printf("\n");
 	}
