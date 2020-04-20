@@ -17,10 +17,18 @@
 /*
  * (private) function creates a new node; if it returns NULL, malloc() was unable to do it!
  */
-stuLL_t* createNodeLinkedList(void)
+stuLL_t* createNodeLinkedList(stuRec_t stdata)
 {
 	// PROBLEM #1:
-	stuLL_t* pHead = (stuLL_t*)malloc(sizeof(stuLL_t));
+	stuLL_t* pHEAD = (stuLL_t*)malloc(sizeof(stuLL_t));
+	if (pHEAD!=NULL)
+	{
+		pHEAD->data.fName, stdata.fName;
+		pHEAD->data.gName, stdata.gName;
+		pHEAD->data.grade = stdata.grade;
+		pHEAD->pNext = NULL; // the head node is also the last node atm
+	}
+	return pHEAD;
 	
 	
 }
