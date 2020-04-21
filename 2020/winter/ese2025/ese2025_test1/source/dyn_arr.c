@@ -49,7 +49,7 @@ int comparo_gName(const void *pA, const void *pB)
 	char *gName_A = student_A.data.gName;
 	char *gName_B = student_B.data.gName;
 
-	return (gName_A, gName_B);
+	return (gName_A - gName_B)    // to get output in ascending order for grades of given data
 }
 
 /*
@@ -110,8 +110,12 @@ stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		break;
 	case gNamesort:
 		// fill the code here for Part a)
+			qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
+		break;
 	case gradesort:
 		// fill the code here for Part b)
+			qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
+		break;
 	}
 	return pHEAD;
 }
