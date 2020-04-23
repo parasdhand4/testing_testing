@@ -20,15 +20,8 @@
 stuLL_t* createNodeLinkedList(stuRec_t stdata)
 {
 	// PROBLEM #1:
-	stuLL_t* pHEAD = (stuLL_t*)malloc(sizeof(stuLL_t)); //we are creating a memory block with the help of malloc which is same size of Node i.e 4 bytes
-	if (pHEAD!=NULL)    //it we don’t put NULL here it will have some garbage value means at starting it points another node. 
-	{
-		pHEAD->data.fName=stdata.fName;  //new data to goes to created node.
-		pHEAD->data.gName=stdata.gName;
-		pHEAD->data.grade = stdata.grade;
-		pHEAD->pNext = NULL; // the head node is also the last node atm
-	}
-	return pHEAD;
+	stuLL_t *pNew = (stuLL_t*)malloc(sizeof(stuLL_t)); //we are creating a memory block with the help of malloc which is same size of Node i.e 4 bytes
+	return pNew; 
 	
 	
 }
