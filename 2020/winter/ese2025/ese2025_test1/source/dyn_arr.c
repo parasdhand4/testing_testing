@@ -49,7 +49,7 @@ int comparo_gName(const void *pA, const void *pB)
 	char *gName_A = student_A.data.gName;
 	char *gName_B = student_B.data.gName;
 
-	return (gName_A - gName_B)    // to get output in ascending order for grades of given data
+	return stcmp(gName_A, gName_B)    
 }
 
 /*
@@ -67,7 +67,7 @@ int comparo_grade(const void *pA, const void *pB)
 	float *grade_A = student_A.data.grade;
 	float *grade_B = student_B.data.grade;
 
-	return stcmp(grade_A,grade_B);
+	return stcmp(grade_A-grade_B);// to get output in ascending order for grades of given data
 	
 }
 
